@@ -1,0 +1,273 @@
+TY  - CHAP
+AB  - Real Villa in Monza (ITALY) was founded as a symbol of the prestige and the greatness of the Asburgic family. Maria Teresa decided to build it when she named his third-born child Ferdinand General Governor of the Austrian Reign of Lombardy. The work started in 1777 and was directed by the court architect Giuseppe Piermarini. This work takes place inside the International Design Competition for the Refurbishment and Enhancement of the Real Villa in Monza and its Gardens (http://villarealemonza.regione.lombardia.it). The aim is to generate materials to support the restoration and the representation for the Villa under different levels of detail. The work implies the realization of a multi-scale modelling. A little scale to represent the whole complexity of the building with its global constructive structure (1:20 U  - Achille, C.
+AU  - Fassi, F.
+N1  - 3D multi-scale modelling of the interior of the Real Villa of Monza (ITALY)
+PB  - Springer
+PY  - 2006
+SP  - 195-205 %! 3D multi-scale modelling of the interior of the Real Villa of Monza (ITALY)
+ST  - 3D multi-scale modelling of the interior of the Real Villa of Monza (ITALY)
+T2  - Innovations in 3D Geo Information Systems
+TI  - 3D multi-scale modelling of the interior of the Real Villa of Monza (ITALY)
+ID  - 15
+ER  - 
+
+
+TY  - CHAP
+AB  - Geospatial domain is characterised by vagueness, especially in the semantic disambiguation of the concepts in the domain, which makes defining universally accepted geo- ontology an onerous task. This is compounded by the lack of appropriate methods and techniques where the individual semantic conceptualisations can be captured and compared to each other. With multiple user conceptualisations, efforts towards a reliable Geospatial Semantic Web, therefore, require personalisation where user diversity can be incorporated. In this paper, a formal approach for detecting mismatches between a users and an experts conceptual model is outlined. The formalisation is used as the basis to develop algorithms to compare models defined in OWL. The algorithms are illustrated in a geographical domain using concepts from the SPACE ontology, and are evaluated by comparing test cases of possible user misconceptions. The work presented in this paper is part of our ongoing research on applying commonsense reasoning to elicit and maintain models that represent users conceptualisations. Such user models will enable taking into account the users perspective of the real world and will empower personalisation algorithms for the Semantic Web.
+AU  - Agarwal, Pragya
+AU  - Huang, Yongjian
+AU  - Dimitrova, Vania
+PB  - Springer
+PY  - 2005
+SP  - 195-210
+ST  - Formal Approach to Reconciliation of Individual Ontologies for Personalisation of Geospatial Semantic Web
+T2  - GeoSpatial Semantics (Lecture Notes in Computer Science)
+TI  - Formal Approach to Reconciliation of Individual Ontologies for Personalisation of Geospatial Semantic Web
+VL  - 3799
+ID  - 16
+ER  - 
+
+
+TY  - JOUR
+AB  - This paper deals with principles for the development of retailing and the urban centre structure. The main conclusion is that a projection of the trend of recent years could hardly be expected in spite of the fact that this is what most forecasts for retailing and centres are based upon. What is more likely to happen is a development in the form of a spiral movement which consequently makes it necessary to try other forecasting methods and other forms of mathematical models, different from the traditional ones. Such improved methods provide the basis also for an improved planning technique which in turn not only gives a split-second picture of the future situation, but also indicates how this situation is reached through extensive use of stage-planning.
+AU  - Agergrd, E.
+AU  - Olsen, P. A.
+AU  - Allpass, J.
+IS  - 1
+PY  - 1970
+SP  - 55-71
+ST  - The interaction between retailing and the urban centre structure: a theory of spiral movement
+T2  - Environment and Planning
+TI  - The interaction between retailing and the urban centre structure: a theory of spiral movement
+VL  - 2
+ID  - 17
+ER  - 
+
+
+TY  - GEN
+AU  - ArcWatch
+PB  - ArcWatch %8 July 2011 %U http://training.esri.com/bibliography/index.cfm?event=general.RecordDetail&ID=120539
+PY  - 2011
+ST  - ArcGIS 10.1 Will Offer Cloud Services, Hosted Map Content, and the New ArcGIS Runtime %X Sharing and collaboration will be the primary focus of ArcGIS 10.1, scheduled for release in early 2012. This release will make it simpler to put mapping and geospatial analytics into the hands of more people without requiring that they be GIS experts. As an ArcGIS user, you will be able to deliver any GIS resource, such as maps, imagery, geodatabases, and tools, as a web service. The ability to access these services will be built into ArcGIS, as well as any application built with one of the ArcGIS APIs
+TI  - ArcGIS 10.1 Will Offer Cloud Services, Hosted Map Content, and the New ArcGIS Runtime %X Sharing and collaboration will be the primary focus of ArcGIS 10.1, scheduled for release in early 2012. This release will make it simpler to put mapping and geospatial analytics into the hands of more people without requiring that they be GIS experts. As an ArcGIS user, you will be able to deliver any GIS resource, such as maps, imagery, geodatabases, and tools, as a web service. The ability to access these services will be built into ArcGIS, as well as any application built with one of the ArcGIS APIs
+ID  - 8
+ER  - 
+
+
+TY  - GEN
+AU  - Choi, In-Chan
+AU  - Kim, Seong-In
+AU  - Kim, Hak-Soo
+M1  - 5
+PY  - 2003
+SP  - 773-786
+ST  - A genetic algorithm with a mixed region search for the asymmetric traveling salesman problem %X This paper presents a genetic algorithm to solve the asymmetric traveling salesman problem. The genetic algorithm proposed in this study extends search space by purposefully generating and including infeasible solutions in the population. Instead of trying to maintain feasibility with crossover operations, it searches through both feasible and infeasible regions for good quality solutions. It is also shown in the article that the size of the infeasible region defined by solutions with subtours dominates that of a feasible region in the asymmetric traveling salesman problem. A comparative computational study using benchmark problems shows that the proposed genetic algorithm is a viable option for hard asymmetric traveling salesman problems
+T2  - Computers & Operations Research %Z %U http://training.esri.com/bibliography/index.cfm?event=general.RecordDetail&ID=84413
+TI  - A genetic algorithm with a mixed region search for the asymmetric traveling salesman problem %X This paper presents a genetic algorithm to solve the asymmetric traveling salesman problem. The genetic algorithm proposed in this study extends search space by purposefully generating and including infeasible solutions in the population. Instead of trying to maintain feasibility with crossover operations, it searches through both feasible and infeasible regions for good quality solutions. It is also shown in the article that the size of the infeasible region defined by solutions with subtours dominates that of a feasible region in the asymmetric traveling salesman problem. A comparative computational study using benchmark problems shows that the proposed genetic algorithm is a viable option for hard asymmetric traveling salesman problems
+VL  - 30
+ID  - 5
+ER  - 
+
+
+TY  - BOOK
+AU  - Commission on, Engineering
+AU  - Technical, Systems
+CY  - Washington, D.C.
+PB  - National Academy Press
+PY  - 1994
+SP  - 133 %@ 0309051398 %U http://training.esri.com/bibliography/index.cfm?event=general.RecordDetail&ID=11232
+ST  - Charting a Course into the Digital Era: Guidance for NOAA's Nautical Charting Mission %X NOAA is responsible for nautical charting of U.S. waters, which encompasses an entire process from hydrographic survey to delivery of a paper or digital chart to users. At this time the nation's charting system is severely stressed: NOAA produces and maintains nearly 1,000 chart editions, over 400 bathymetric charts, nine coast pilots, and numerous supporting publications. About 1.4 million charts are printed and sold each year, and there is a growing backlog of requests for surveys. Electronic chart products are increasingly useful and affordable, but they are not legally admissable to satisfy internationally mandated chart carriage regulations. About thirty percent of NOAA's hydrographic data are now in digital form, and that figure will increase. As a result of expanding needs for information to help manage coastal and marine areas and aid navigation, as well as new technologies such as GPS and side-scan sonar, NOAA's nautical charting mission is evolving from producing a one-product finished paper chart series to creating and maintaining a digital database from which many products, analyses, and services will flow to users. NOAA is thus faced with the need to satisfy an increasing diverse user community and to adapt to rapid technological change at the same time as it faces severe budget constraints. This report outlines recommendations for priorities, public/private partnerships, and legislative and organizational changes that can help NOAA make wise choices and continue to adhere to its mission
+TI  - Charting a Course into the Digital Era: Guidance for NOAA's Nautical Charting Mission %X NOAA is responsible for nautical charting of U.S. waters, which encompasses an entire process from hydrographic survey to delivery of a paper or digital chart to users. At this time the nation's charting system is severely stressed: NOAA produces and maintains nearly 1,000 chart editions, over 400 bathymetric charts, nine coast pilots, and numerous supporting publications. About 1.4 million charts are printed and sold each year, and there is a growing backlog of requests for surveys. Electronic chart products are increasingly useful and affordable, but they are not legally admissable to satisfy internationally mandated chart carriage regulations. About thirty percent of NOAA's hydrographic data are now in digital form, and that figure will increase. As a result of expanding needs for information to help manage coastal and marine areas and aid navigation, as well as new technologies such as GPS and side-scan sonar, NOAA's nautical charting mission is evolving from producing a one-product finished paper chart series to creating and maintaining a digital database from which many products, analyses, and services will flow to users. NOAA is thus faced with the need to satisfy an increasing diverse user community and to adapt to rapid technological change at the same time as it faces severe budget constraints. This report outlines recommendations for priorities, public/private partnerships, and legislative and organizational changes that can help NOAA make wise choices and continue to adhere to its mission
+ID  - 2
+ER  - 
+
+
+TY  - EDBOOK
+AB  - Every year more boaters, fishing enthusiasts, and other recreational users place a greater strain on the limited space and natural resources of Rehoboth Bay. Regional development and agricultural and industrial activities affect the bay as well, with increased runoff of chemicals and nutrients. A particular genus of macroalgae known as Ulva grows in these waters naturally, but has become an increasing problem as the chemistry of the bay changes. Ulva management in Rehoboth Bay has challenged government agencies and local organizations for a number of years. Increases in Ulva biomass can lead to an increase in dead organic matter and to reduced dissolved oxygen levels in the bay. Lower dissolved oxygen can have a significant impact on the local aquatic ecology. Increased dead organic loads can cause foul odors and create hazards for boats. Government agencies have funded Ulva collection operations to reduce the effects of the macroalgae on the ecosystem and recreational opportunities in Rehoboth Bay. Unfortunately, little data exists on either the spatial extent of Ulva in Rehoboth Bay or the effectiveness of the collection operations. It seems clear that the agencies funding these operations must identify the present extent of Ulva in the bay and periodically update that information to determine the effectiveness of their efforts. This chapter describes how the Delaware Coastal Programs (DCP) identified the spatial extent of macroalgae, including Ulva, in Rehoboth Bay in the late spring of 1999 and 2000. DCP used aerial photography, image-processing software, a geographic information system (GIS), and a limited field survey to do this work, which resulted in the identification of nearly 2 square kilometers of macroalgae in all but the deepest parts of the bay. The project results illustrate the significant potential benefits that remotely sensed imagery brings to resource management work.
+AU  - Dawn, J. Wright
+AU  - Kimberly, B. Cole
+AU  - David, B. Carter
+AU  - Chuck, Schonder
+AU  - Mark, Finkbeiner
+PB  - ESRI Press
+PY  - 2002
+SP  - 85-104 %Z Dawn J. Wright, editor %U http://training.esri.com/bibliography/index.cfm?event=general.RecordDetail&ID=52622
+ST  - Finding the Green Under the Sea: The Rehoboth Bay Ulva Identification Project
+TI  - Finding the Green Under the Sea: The Rehoboth Bay Ulva Identification Project
+ID  - 7
+ER  - 
+
+
+TY  - THES
+AB  - This study evaluates a 1D and a 2D method for analyzing the combined effect of inland rainfall and hurricane-induced storm surge on a coastal floodplain. Horsepen Bayou near Clear Lake, southeast of Houston, Texas is vulnerable to storm surge, which can travel upstream into the Bayou and exacerbate flooding outside the designated floodplain. However, the current 100-year floodplain for this area is delineated using a 1D model without direct storm surge inputs. Additionally, floodplains with flat topography, like Horsepen, could be modeled more accurately using 2D models, instead of the traditional 1D approach. A 1D HEC-RAS model and a 2D XPSWMM model are used to compare the resulting floodplain from three historical storms and one synthetic storm. When compared to actual FEMA flood claims, the floodplains calculated by the 2D model are more representative of inundation hazard in Horsepen and therefore a better tool for evaluating flooding in the area.
+AU  - Emilia, Stepinski
+CY  - United States -- Texas %6 M.S.
+KW  - Applied sciences
+One-dimensional
+Earth sciences
+0368:Physical geography
+0775:Environmental engineering
+Two-dimensional
+M3  - 1498892
+N1  - Bedient, Philip
+PB  - Rice University
+PY  - 2011
+SP  - 79
+ST  - 1D and 2D Methods for Modeling Floodplains under Storm Surge Conditions
+TI  - 1D and 2D Methods for Modeling Floodplains under Storm Surge Conditions
+ID  - 13
+ER  - 
+
+
+TY  - WEB
+AU  - Gerald, Rushton
+AU  - Marc, P. Armstrong
+PB  - Department of Geography, University of Iowa %8 December 1997 %9 CD-ROM %Z Also appears as a University of Iowa web page. %U http://training.esri.com/bibliography/index.cfm?event=general.RecordDetail&ID=24069
+PY  - 1997
+ST  - Improving Public Health Through Geographical Information Systems: An Instructional Guide to Major Concepts and Their Implementation %X The area of GIS and Public Health has risen to prominence in the past two years with the recognition that health surveillance practices and health service allocations need to become more sensitive to the needs of people in local geographic areas. The collection, storage and manipulation of geographic information has undergone a revolution in recent years with the development and widespread availability of GIS software. Many health professionals can benefit from further education in this area, and with their new knowledge, they can influence the progress of health surveillance, environmental health assessment and the geographic allocation of health resources. Our interpretation of GIS differs from the popular "desktop mapping" concept of GIS which is common in many state and federal health programs. We deal with health, environment and socio-economic data at many geographic scales of analysis, starting with the individual entity. This CD offers instruction in the matching of health information by addresses to digital maps. After this has been successfully accomplished, software available on the CDROM as freeware (DMAP) can be used to prepare input for GIS software to make isoline maps showing areas of high and low disease incidence rates. Alternatively, individually geo-coded health data can be aggregated to any defined geography, including census entities or other areas of interest--for example, the pollution footprint of a point source pollutant. We teach the analysis of disease distributions as continuous spatial distributions that are tested for statistical significance. Programs in DMAP are available for this purpose
+TI  - Improving Public Health Through Geographical Information Systems: An Instructional Guide to Major Concepts and Their Implementation %X The area of GIS and Public Health has risen to prominence in the past two years with the recognition that health surveillance practices and health service allocations need to become more sensitive to the needs of people in local geographic areas. The collection, storage and manipulation of geographic information has undergone a revolution in recent years with the development and widespread availability of GIS software. Many health professionals can benefit from further education in this area, and with their new knowledge, they can influence the progress of health surveillance, environmental health assessment and the geographic allocation of health resources. Our interpretation of GIS differs from the popular "desktop mapping" concept of GIS which is common in many state and federal health programs. We deal with health, environment and socio-economic data at many geographic scales of analysis, starting with the individual entity. This CD offers instruction in the matching of health information by addresses to digital maps. After this has been successfully accomplished, software available on the CDROM as freeware (DMAP) can be used to prepare input for GIS software to make isoline maps showing areas of high and low disease incidence rates. Alternatively, individually geo-coded health data can be aggregated to any defined geography, including census entities or other areas of interest--for example, the pollution footprint of a point source pollutant. We teach the analysis of disease distributions as continuous spatial distributions that are tested for statistical significance. Programs in DMAP are available for this purpose
+ID  - 9
+ER  - 
+
+
+TY  - GEN
+AB  - No abstract.
+AU  - Jeffrey, Engerski
+CY  - Jacksonville, Florida, USA %8 2-4 May 2007 %U http://training.esri.com/bibliography/index.cfm?event=general.RecordDetail&ID=96883
+PB  - ESRI
+PY  - 2007
+ST  - Signal Inventory Application
+T2  - 2007 Southeast User Group
+TI  - Signal Inventory Application
+ID  - 6
+ER  - 
+
+
+TY  - JOUR
+AB  - Evaluating the importance of different forms of open space to households requires an evaluation of the service flows provided by each type of open space. For many non-market goods, these flows occur over multiple spatial scales and require analysis that simultaneously accounts for capitalization at each scale. To meet this often overlooked need, we apply a newly developed extension to the Hausman-Taylor model that treats multiple housing transactions occurring in a spatial location as a panel. This methodology allows us to account for omitted variables within a subdivision while instrumenting for variables identified through differences between subdivisions. We measure capitalization of open space at three distinct spatial extents: adjacency, walkability, and subdivision-wide. We find that the interactions between subdivision open space and private open space in the form of lot size change from complementarity at small scales to substitutability at large scales. These results confirm much of the intuition developed by ecologists and public planners on the likely service flows associated with open space and show how our approach to accounting for multiple spatial scales of capitalization in the evaluation of non-market goods could be beneficial to other areas of applied research.
+AU  - Joshua, K. Abbott
+AU  - Klaiber, H. Allen
+KW  - Open space
+Capitalization
+Spatial scale
+Endogeneity
+Hedonic
+Hausman-Taylor
+IS  - 2
+PY  - 2010
+SP  - 296-307
+ST  - Is all space created equal? Uncovering the relationship between competing land uses in subdivisions
+T2  - Ecological Economics
+TI  - Is all space created equal? Uncovering the relationship between competing land uses in subdivisions
+VL  - 70
+ID  - 10
+ER  - 
+
+
+TY  - JOUR
+AB  - The network design problem with relays arises in telecommunications and distribution systems where the payload must be reprocessed at intermediate stations called relays on the route from its origin to its destination. In fiber-optic networks, for example, optical signals may be regenerated several times to overcome signal degradation because of attenuation and other factors. Given a network and a set of commodities, the network design problem with relays involves selecting network edges, determining a route for each commodity, and locating relays to minimize the network design cost. This paper presents a new formulation to the problem based on set covering constraints. The new formulation is used to design a genetic algorithm with a specialized crossover/mutation operator which generates a feasible path for each commodity, and the locations of relays on these paths are determined by solving the corresponding set covering problem. Computational experiments show that the proposed approach can outperform other approaches, particularly on large size problems.
+AU  - Konak, Abdullah
+KW  - Genetic algorithms
+Network design
+Heuristics
+Relay assignment
+IS  - 3
+PY  - 2012
+SP  - 829-837
+ST  - Network design problem with relays: A genetic algorithm with a path-based crossover and a set covering formulation
+T2  - European Journal of Operational Research
+TI  - Network design problem with relays: A genetic algorithm with a path-based crossover and a set covering formulation
+VL  - 218
+ID  - 11
+ER  - 
+
+
+TY  - CONF
+AU  - Neal, Weinberg
+CY  - Palm Springs, California, USA
+PB  - ESRI
+PY  - 1990
+SP  - 1 %8 14-18 May 1990 %U http://training.esri.com/bibliography/index.cfm?event=general.RecordDetail&ID=86134
+ST  - "Feedback to the GIS" -- Inviting the GIS User to Become Involved %B 1990 Esri International User Conference %X This paper describes a feedback program built into the Albuquerque Geographic Information System. The feedback program allows any user of this city-wide GIS to send information back to the central staff about the quality and accuracy of basemap information. Developed in ARC/INFO's AML (ARC Macro Language), the program utilizes capabilities within ARC/INFO, such as map libraries and map annotation to graphically capture questions, comments, corrections, and additions to basemap data. The graphic feedback annotation is then routinely clipped out and processed as map sections and updated. The use of this program has not only improved the content of basemap data, but also serves as a mechanism to allow even the most casual user of the GIS to become more involved
+TI  - "Feedback to the GIS" -- Inviting the GIS User to Become Involved %B 1990 Esri International User Conference %X This paper describes a feedback program built into the Albuquerque Geographic Information System. The feedback program allows any user of this city-wide GIS to send information back to the central staff about the quality and accuracy of basemap information. Developed in ARC/INFO's AML (ARC Macro Language), the program utilizes capabilities within ARC/INFO, such as map libraries and map annotation to graphically capture questions, comments, corrections, and additions to basemap data. The graphic feedback annotation is then routinely clipped out and processed as map sections and updated. The use of this program has not only improved the content of basemap data, but also serves as a mechanism to allow even the most casual user of the GIS to become more involved
+VL  - 1 %6 2
+ID  - 4
+ER  - 
+
+
+TY  - ADVS
+AU  - Peirce, Eichelberger
+AU  - James, Guthrie
+CY  - Oak Ridge, Illinois %9 videotape and workbook kit %Z Approximately four hours duration. Standard U.S. NTSC/VHS format. %U http://training.esri.com/bibliography/index.cfm?event=general.RecordDetail&ID=9357
+PB  - URISA
+PY  - 2000
+ST  - Address issues and IS/GIS implementation %X This videotape and its accompanying workbook provide practical techniques for working with street centerline and street address files, geocoding, and the relationship to Census data. Additional topics covered include the role and importance of addressing; addressing systems, grids and jurisdictional boundaries; addressing standards; GIS data models; how to implement an addressing program; addressing ordinances; and code enforcement. The workbook includes a comprehensive appendix on addressing guidelines, database tables, professional paper reprints, sample forms, and a glossary. The set is part of the URISA Video Workshop Series, recording URISA Certified Workshops
+TI  - Address issues and IS/GIS implementation %X This videotape and its accompanying workbook provide practical techniques for working with street centerline and street address files, geocoding, and the relationship to Census data. Additional topics covered include the role and importance of addressing; addressing systems, grids and jurisdictional boundaries; addressing standards; GIS data models; how to implement an addressing program; addressing ordinances; and code enforcement. The workbook includes a comprehensive appendix on addressing guidelines, database tables, professional paper reprints, sample forms, and a glossary. The set is part of the URISA Video Workshop Series, recording URISA Certified Workshops
+ID  - 1
+ER  - 
+
+
+TY  - THES
+AB  - We explore a methodology to construct 3D maps of indoor environments using multiple heterogeneous robots. The robots acquire overlapping 3D range images at contiguous locations and fuse them together to form a complete range map. Our methodology involves three major steps in map construction: the first step is to estimate an initial pose between the multiple robots using a real-time camera pose estimation algorithm, the second step involves extracting polygon features from overlapping range images and the third step involves registration of the overlapping range images using extracted polygonal features. We evaluate the performance of several approaches to camera pose estimation, which is used to determine the initial estimate of pose between the multiple robots. We introduce a fast and robust segmentation algorithm, which extracts the polygonal features from the 3D range images. A polygon-based registration algorithm accurately fuses the overlapping range images. The algorithm further refines the initial pose estimate by minimizing the geometric distance between corresponding polygonal features extracted from overlapping range images. Our polygon-based registration combined with camera pose estimation executes in real-time and much faster compared to point-based scan registration techniques. We present experimental results obtained while building indoor maps and quantitative analysis of the algorithms used in map construction of indoor environments.
+AU  - Ravi, K. Kaushik
+CY  - United States -- New York %6 Ph.D.
+KW  - Computer science
+Camera pose estimation
+Three dimensional maps
+Heterogenous robots
+Applied sciences
+Electrical engineering
+Mapping
+Modeling
+M3  - 3481653
+N1  - Xiao, Jizhong
+PB  - City University of New York
+PY  - 2011
+SP  - 188
+ST  - 3D map building of structured indoor environments with heterogeneous robots
+TI  - 3D map building of structured indoor environments with heterogeneous robots
+ID  - 14
+ER  - 
+
+
+TY  - CHAP
+A2  - Harris, P. T.
+A2  - Baker, E. K.
+AB  - The Madison-Swanson Marine Protected Area is located off the Florida coast in the Gulf of Mexico at the margin of the continental shelf and slope in 60 to 140 m of water. Prominent within Madison-Swanson is a limestone ridge, thought to be the remnant of a 14,000+ year-old coral reef. The Pulley Ridge Habitat Area of Particular Concern is a 100+ km-long series of N-S trending, drowned, barrier islands on the southwest Florida Shelf. It appears to be formed on top of an ancient coastal barrier island or strand line during a period when sea levels were ~ 65 to 80 m lower and is believed to be the deepest hermatypic coral reef on the continental shelf of the United States. The depth ranges from ~ 55 m near the eastern edge of Pulley Ridge down to about 115 m on the western edge. Fisheries studies of Madison-Swanson indicate that Mycteroperca spp. (grouper) and Lutjanus campechanus (red snapper) are associated with hard bottom features, with spawning aggregations of M. microlepis (gag) and/or M. phenax (scamp) confirmed at several sites. Canonical Correspondence Analyses (CCA) conducted on fish and habitat data from Madison-Swanson indicated gag are most closely associated with relict coral reefs and to a lesser degree with greater depth and higher relief while red snapper had a higher correlation with soft corals. Remotely Operated Vehicle (ROV) observations were used to associate fish species with habitat types for Pulley Ridge. The loose rubble found in Pulley Ridge was conducive for Epinephelus morio (red grouper) to excavate pits in the sediment and they were the most abundant large grouper species in that area.
+AU  - Rebecca, J. Allee
+AU  - Andrew, W. David
+AU  - David, F. Naar
+CY  - Amsterdam
+PB  - Elsevier
+PY  - 2011
+ST  - Two shelf edge marine protected areas in the eastern Gulf of Mexico
+T2  - Seafloor Geomorphology as Benthic Habitat: GeoHab Atlas of seafloor geomorphic features and benthic habitats.
+TI  - Two shelf edge marine protected areas in the eastern Gulf of Mexico
+ID  - 12
+ER  - 
+
+
+TY  - JOUR
+AB  - Location-based services (LBS) are applications capable of utilising the position of a device, and its user, in the provision of a value-added service. With such applications comes the ability for an individual's location to be monitored either willingly or covertly by others, thus introducing a set of challenges from a social perspective. This article reports on the results of an observational study that required participants to maintain a digital location chronicle 
+bal positioning system data log, daily diary entry and personal reflection 
+ver a 2-week period. The primary aim of this exercise was for participants to observe, reflect and record their experiences during and at the completion of the participant observation, in order to reveal the ensuing collective implications. This study is a further research based on previous work concerning LBS user attitudes (Abbas 2010), and as such concentrates on the Gen-Y or young adult consumer group. This investigation considers additionally the importance of LBS within a social context, whereby participants are prompted to reflect on their willingness to be monitored or tracked by a partner, parent, friend, employer and/or stranger. The results are presented in terms of the social implications. The dominant themes in the respective relationship categories are presented in each context. It was noted that participants readiness to grant access to their location information is heavily dependent on the amount of trust existing within a specific relationship, whether there is a perceived privacy threat, the amount of control a participant wishes to maintain, and if there is concern in relation to personal security and safety being compromised. Additional technological and device-related issues were also observed.
+AU  - Roba, Abbas
+KW  - LOCATION-based services
+INFORMATION services
+GLOBAL Positioning System
+ARTIFICIAL satellites in navigation
+MOBILE geographic information systems
+GPS
+location information
+IS  - 3/4
+PY  - 2011
+SP  - 156-181
+ST  - The social implications of location-based services: an observational study of users
+T2  - Journal of Location Based Services
+TI  - The social implications of location-based services: an observational study of users
+VL  - 5
+ID  - 3
+ER  - 
+
+
+
