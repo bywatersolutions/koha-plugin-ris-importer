@@ -66,56 +66,323 @@ sub to_marc {
             push( @{ $ris->{$tag} }, $value );
         }
 
-        # Author
-        $record->append_fields(
-            MARC::Field->new(
-                '100', '1', '#', map { +'a' => $_ } @{ $ris->{AU} }
-            )
-        ) if $ris->{AU};
+        my $field;
 
-        # Author, secondary
-        $record->append_fields(
-            MARC::Field->new(
-                '700', '1', '#', map { +'a' => $_ } @{ $ris->{A2} }
-            )
-        ) if $ris->{A2};
+        my $TY = $ris->{TY}->[0];
+        chomp( $TY );
 
-        # Title
-        $record->append_fields(
-            MARC::Field->new( '245', '#', '#', 'a' => $ris->{TI}->[0] ) )
-          if $ris->{TI};
-
-        # Title, secondary
-        map {
-            $record->append_fields(
-                MARC::Field->new( '773', '1', '#', 't' => $_ ) )
-        } @{ $ris->{T2} };
-
-        # Volume
-        map {
-            $record->append_fields(
-                MARC::Field->new( '773', '1', '#', 't' => $_ ),
-                MARC::Field->new( '502', '#', '#', 'n' => $_ ),
-              )
-        } @{ $ris->{VL} };
-
-        # Publisher and year
-        if ( $ris->{PY} || $ris->{CY} ) {
-            my @subfield_a = map { +'a' => $_ } @{ $ris->{CY} };
-            my @subfield_c = map { +'c' => $_ } @{ $ris->{PY} };
-            my $field =
-              MARC::Field->new( '264', '1', '1', @subfield_a, @subfield_c );
-            $record->append_fields($field);
+        unless ($TY) {
+            warn "No TY field found! Skipping record!";
+            next;
         }
 
-        # Keywords
-        foreach my $kws ( @{ $ris->{KW} } ) {
-            foreach my $kw ( split( /\n/, $kws ) ) {
-                next unless $kw;
+        if ( $TY eq 'BOOK' || $TY eq 'CHAP') {
+
+            # ISBN/ISSN (SN)
+            map {
                 $record->append_fields(
-                    MARC::Field->new( '650', '#', '0', a => $kw ) );
+                    MARC::Field->new( '020', '#', '#', 'a' => $_ ),
+                  )
+            } @{ $ris->{SN} };
+
+            # DOI (DO)
+            map {
+                $record->append_fields(
+                    MARC::Field->new( '024', '7', '#', 'a' => $_, '2' => $_ ),
+                  )
+            } @{ $ris->{DO} };
+
+            # Author (AU), Author Address (AD)
+            foreach my $i ( 0 .. scalar @{ $ris->{AU} } - 1 ) {
+                $field =
+                  MARC::Field->new( '100', '1', '#', 'a' => $ris->{AU}->[$i] );
+
+                $field->add_subfields( 'u' => $ris->{AD}->[$i] )
+                  if $ris->{AD}->[$i];
+
+                $record->append_fields($field);
             }
+
+            # Title (TI), Secondary author (A2)
+            my @subfields;
+            push( @subfields, 'a' => $ris->{TI}->[0] ) if $ris->{TI}->[0];
+            push( @subfields, 'a' => $ris->{A2}->[0] ) if $ris->{A2}->[0];
+            $record->append_fields(
+                MARC::Field->new( '245', '#', '#', @subfields ) )
+              if @subfields;
+
+            # Short Title (ST)
+            map {
+                $record->append_fields(
+                    MARC::Field->new( '246', '2', '#', 'a' => $_ ),
+                  )
+            } @{ $ris->{ST} };
+
+            # Section (SE)
+            map {
+                $record->append_fields(
+                    MARC::Field->new( '246', '3', '#', 'n' => $_ ),
+                  )
+            } @{ $ris->{SE} };
+
+            # Edition (ET)
+            map {
+                $record->append_fields(
+                    MARC::Field->new( '250', '#', '#', 'a' => $_ ),
+                  )
+            } @{ $ris->{ET} };
+
+            # Year (PY), Place Published (CY), Publisher (PB), Date (DA)
+            if ( $ris->{PY} || $ris->{CY} || $ris->{PB} ) {
+                my @subfield_a = map { +'a' => $_ } @{ $ris->{CY} };
+                @subfield_a =
+                  ( @subfield_a, map { +'a' => $_ } @{ $ris->{PB} } );
+                my @subfield_c = map { +'c' => $_ } @{ $ris->{PY} };
+                @subfield_c =
+                  ( @subfield_c, map { +'c' => $_ } @{ $ris->{DA} } );
+                my $field =
+                  MARC::Field->new( '264', '1', '1', @subfield_a, @subfield_c );
+                $record->append_fields($field);
+            }
+
+            # Number of Volumes (NV)
+            map {
+                $record->append_fields(
+                    MARC::Field->new( '300', '#', '#', 'a' => $_ ),
+                  )
+            } @{ $ris->{NV} };
+
+            # Pages (SP)
+            map {
+                $record->append_fields(
+                    MARC::Field->new( '300', '#', '#', 'a' => $_ ),
+                  )
+            } @{ $ris->{SP} };
+
+            # Volume (VL)
+            map {
+                $record->append_fields(
+                    MARC::Field->new( '490', '#', '#', 'v' => $_ ),
+                  )
+            } @{ $ris->{VL} };
+
+            # Notes (N1)
+            map {
+                $record->append_fields(
+                    MARC::Field->new( '500', '#', '#', 'a' => $_ ),
+                  )
+            } @{ $ris->{N1} };
+
+            # Abstract (AB)
+            map {
+                $record->append_fields(
+                    MARC::Field->new( '520', '3', '#', 'a' => $_ ),
+                  )
+            } @{ $ris->{AB} };
+
+            # Custom 1 (C1)
+            map {
+                $record->append_fields(
+                    MARC::Field->new( '590', '#', '#', 'a' => $_ ),
+                  )
+            } @{ $ris->{C1} };
+
+            # Keywords
+            foreach my $kws ( @{ $ris->{KW} } ) {
+                foreach my $kw ( split( /\n/, $kws ) ) {
+                    next unless $kw;
+                    $record->append_fields(
+                        MARC::Field->new( '650', '#', '0', a => $kw ) );
+                }
+            }
+
+            # Authors, tertiary (A3) and subsidiary (A4)
+            foreach my $author ( @{ $ris->{A3} }, @{ $ris->{A4} } ) {
+                $record->append_fields(
+                    MARC::Field->new( '700', '1', '#', 'a' => $author ) );
+            }
+
+            # Secondary Title (T2), Number (M1)
+            if ( $ris->{T2} ) {
+                foreach my $i ( 0 .. scalar @{ $ris->{T2} } - 1 ) {
+                    $field =
+                      MARC::Field->new( '773', '1', '#',
+                        't' => $ris->{T2}->[$i] );
+
+                    $field->add_subfields( 'g' => $ris->{M1}->[$i] )
+                      if $ris->{M1}->[$i];
+
+                    $record->append_fields($field);
+                }
+            }
+
+            # Original Publication (OP)
+            map {
+                $record->append_fields(
+                    MARC::Field->new( '773', '#', '1', 'g' => $_ ),
+                  )
+            } @{ $ris->{OP} };
+
+            # URL (UR)
+            map {
+                $record->append_fields(
+                    MARC::Field->new( '856', '4', '#', 'u' => $_ ),
+                  )
+            } @{ $ris->{UR} };
+
         }
+        elsif ( $TY eq 'CPAPER' ) {
+
+            # ISBN/ISSN (SN)
+            map {
+                $record->append_fields(
+                    MARC::Field->new( '020', '#', '#', 'a' => $_ ),
+                  )
+            } @{ $ris->{SN} };
+
+            # DOI (DO)
+            map {
+                $record->append_fields(
+                    MARC::Field->new( '024', '7', '#', 'a' => $_, '2' => $_ ),
+                  )
+            } @{ $ris->{DO} };
+
+            # Author (AU), Author Address (AD)
+            foreach my $i ( 0 .. scalar @{ $ris->{AU} } - 1 ) {
+                $field =
+                  MARC::Field->new( '100', '1', '#', 'a' => $ris->{AU}->[$i] );
+
+                $field->add_subfields( 'u' => $ris->{AD}->[$i] )
+                  if $ris->{AD}->[$i];
+
+                $record->append_fields($field);
+            }
+
+            # Title (TI), Secondary author (A2)
+            my @subfields;
+            push( @subfields, 'a' => $ris->{TI}->[0] ) if $ris->{TI}->[0];
+            push( @subfields, 'a' => $ris->{A2}->[0] ) if $ris->{A2}->[0];
+            $record->append_fields(
+                MARC::Field->new( '245', '#', '#', @subfields ) )
+              if @subfields;
+
+            # Short Title (ST)
+            map {
+                $record->append_fields(
+                    MARC::Field->new( '246', '2', '#', 'a' => $_ ),
+                  )
+            } @{ $ris->{ST} };
+
+            # Section (SE)
+            map {
+                $record->append_fields(
+                    MARC::Field->new( '246', '3', '#', 'n' => $_ ),
+                  )
+            } @{ $ris->{SE} };
+
+            # Edition (ET)
+            map {
+                $record->append_fields(
+                    MARC::Field->new( '250', '#', '#', 'a' => $_ ),
+                  )
+            } @{ $ris->{ET} };
+
+            # Year (PY), Place Published (CY), Publisher (PB), Date (DA)
+            if ( $ris->{PY} || $ris->{CY} || $ris->{PB} ) {
+                my @subfield_a = map { +'a' => $_ } @{ $ris->{CY} };
+                @subfield_a =
+                  ( @subfield_a, map { +'a' => $_ } @{ $ris->{PB} } );
+                my @subfield_c = map { +'c' => $_ } @{ $ris->{PY} };
+                @subfield_c =
+                  ( @subfield_c, map { +'c' => $_ } @{ $ris->{DA} } );
+                my $field =
+                  MARC::Field->new( '264', '1', '1', @subfield_a, @subfield_c );
+                $record->append_fields($field);
+            }
+
+            # Number of Volumes (NV)
+            map {
+                $record->append_fields(
+                    MARC::Field->new( '300', '#', '#', 'a' => $_ ),
+                  )
+            } @{ $ris->{NV} };
+
+            # Pages (SP)
+            map {
+                $record->append_fields(
+                    MARC::Field->new( '300', '#', '#', 'a' => $_ ),
+                  )
+            } @{ $ris->{SP} };
+
+            # Volume (VL)
+            map {
+                $record->append_fields(
+                    MARC::Field->new( '490', '#', '#', 'v' => $_ ),
+                  )
+            } @{ $ris->{VL} };
+
+            # Notes (N1)
+            map {
+                $record->append_fields(
+                    MARC::Field->new( '500', '#', '#', 'a' => $_ ),
+                  )
+            } @{ $ris->{N1} };
+
+            # Abstract (AB)
+            map {
+                $record->append_fields(
+                    MARC::Field->new( '520', '3', '#', 'a' => $_ ),
+                  )
+            } @{ $ris->{AB} };
+
+            # Custom 1 (C1)
+            map {
+                $record->append_fields(
+                    MARC::Field->new( '590', '#', '#', 'a' => $_ ),
+                  )
+            } @{ $ris->{C1} };
+
+            # Keywords
+            foreach my $kws ( @{ $ris->{KW} } ) {
+                foreach my $kw ( split( /\n/, $kws ) ) {
+                    next unless $kw;
+                    $record->append_fields(
+                        MARC::Field->new( '650', '#', '0', a => $kw ) );
+                }
+            }
+
+            # Authors, tertiary (A3) and subsidiary (A4)
+            foreach my $author ( @{ $ris->{A3} }, @{ $ris->{A4} } ) {
+                $record->append_fields(
+                    MARC::Field->new( '700', '1', '#', 'a' => $author ) );
+            }
+
+            # Secondary Title (T2), Number (M1)
+            if ( $ris->{T2} ) {
+                foreach my $i ( 0 .. scalar @{ $ris->{T2} } - 1 ) {
+                    $field =
+                      MARC::Field->new( '773', '1', '#',
+                        't' => $ris->{T2}->[$i] );
+
+                    $field->add_subfields( 'g' => $ris->{M1}->[$i] )
+                      if $ris->{M1}->[$i];
+
+                    $record->append_fields($field);
+                }
+            }
+
+            # URL (UR)
+            map {
+                $record->append_fields(
+                    MARC::Field->new( '856', '4', '#', 'u' => $_ ),
+                  )
+            } @{ $ris->{UR} };
+
+        }
+
+        # Reference Type (TY)
+        $record->append_fields(
+            MARC::Field->new( '942', '#', '#', 'c' => $TY ) );
 
         print $record->as_formatted() . "\n\n";
 
@@ -123,6 +390,24 @@ sub to_marc {
     }
 
     return $batch;
+}
+
+sub map_nr_nr {
+    my ($params);
+    my $record        = $params->{record};
+    my $ris           = $params->{ris};
+    my $ris_field     = $params->{ris_field};
+    my $marc_field    = $params->{marc_field};
+    my $marc_subfield = $params->{marc_subfield};
+    my $indicator_1   = $params->{indicator_1} // '#';
+    my $indicator_2   = $params->{indicator_2} // '#';
+
+    $record->append_fields(
+        MARC::Field->new(
+            $marc_field, $indicator_1,
+            $indicator_2, $marc_subfield => $ris->{$ris_field}->[0]
+        )
+    ) if $ris->{$ris_field};
 }
 
 ## This is the 'install' method. Any database tables or other setup that should

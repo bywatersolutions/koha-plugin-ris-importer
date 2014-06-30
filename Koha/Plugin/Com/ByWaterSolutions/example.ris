@@ -247,27 +247,94 @@ ID  - 12
 ER  - 
 
 
-TY  - JOUR
-AB  - Location-based services (LBS) are applications capable of utilising the position of a device, and its user, in the provision of a value-added service. With such applications comes the ability for an individual's location to be monitored either willingly or covertly by others, thus introducing a set of challenges from a social perspective. This article reports on the results of an observational study that required participants to maintain a digital location chronicle 
-bal positioning system data log, daily diary entry and personal reflection 
-ver a 2-week period. The primary aim of this exercise was for participants to observe, reflect and record their experiences during and at the completion of the participant observation, in order to reveal the ensuing collective implications. This study is a further research based on previous work concerning LBS user attitudes (Abbas 2010), and as such concentrates on the Gen-Y or young adult consumer group. This investigation considers additionally the importance of LBS within a social context, whereby participants are prompted to reflect on their willingness to be monitored or tracked by a partner, parent, friend, employer and/or stranger. The results are presented in terms of the social implications. The dominant themes in the respective relationship categories are presented in each context. It was noted that participants readiness to grant access to their location information is heavily dependent on the amount of trust existing within a specific relationship, whether there is a perceived privacy threat, the amount of control a participant wishes to maintain, and if there is concern in relation to personal security and safety being compromised. Additional technological and device-related issues were also observed.
-AU  - Roba, Abbas
-KW  - LOCATION-based services
-INFORMATION services
-GLOBAL Positioning System
-ARTIFICIAL satellites in navigation
-MOBILE geographic information systems
-GPS
-location information
-IS  - 3/4
-PY  - 2011
-SP  - 156-181
-ST  - The social implications of location-based services: an observational study of users
-T2  - Journal of Location Based Services
-TI  - The social implications of location-based services: an observational study of users
-VL  - 5
-ID  - 3
+TY  - BOOK
+AU  - Primary Author ( 100$a )
+PY  - Published Year ( 264$c )
+TI  - Title ( 245$a )
+A2  - Secondary author ( 245$c )
+T2  - Secondary Title ( 773$t )
+CY  - Place Published ( 264$a )
+PB  - Publisher ( 264$a )
+VL  - Volume ( 490$v )
+NV  - Number of volumes ( 300$a )
+M1  - Number ( 773$g )
+SP  - Pages ( 300$a )
+SE  - Section ( 246$n )
+A3  - Tertiary author ( 700$a )
+ET  - Edition ( 250$a )
+DA  - Date ( 264$c )
+A4  - Subsidiary author ( 700$a )
+ST  - Short Title ( 246#a )
+SN  - ISBN/ISSN ( 020#a )
+KW  - Keyword 1 ( 650$a )
+Keyword 2 ( 650$a )
+Keyword 3 ( 650$a )
+AB  - Abstract ( 520$a )
+N1  - Notes ( 500$a )
+UR  - URL ( 856$u )
+AD  - Author Address ( 100$u )
+DO  - DOI ( 024$2, 024$a )
+C1  - Custom 1 ( 590$a )
 ER  - 
 
 
+TY  - CHAP
+AU  - Primary Author ( 100$a )
+PY  - Published Year ( 264$c )
+TI  - Title ( 245$a )
+A2  - Secondary author ( 245$c )
+T2  - Secondary Title ( 773$t )
+CY  - Place Published ( 264$a )
+PB  - Publisher ( 264$a )
+VL  - Volume ( 490$v )
+NV  - Number of volumes ( 300$a )
+M1  - Number ( 773$g )
+SP  - Pages ( 300$a )
+SE  - Section ( 246$n )
+A3  - Tertiary author ( 700$a )
+ET  - Edition ( 250$a )
+DA  - Date ( 264$c )
+A4  - Subsidiary author ( 700$a )
+ST  - Short Title ( 246#a )
+SN  - ISBN/ISSN ( 020#a )
+OP  - Original Publication ( 773$g )
+KW  - Keyword 1 ( 650$a )
+Keyword 2 ( 650$a )
+Keyword 3 ( 650$a )
+AB  - Abstract ( 520$a )
+N1  - Notes ( 500$a )
+UR  - URL ( 856$u )
+AD  - Author Address ( 100$u )
+DO  - DOI ( 024$2, 024$a )
+C1  - Custom 1 ( 590$a )
+ER  - 
+
+
+TY  - CPAPER
+AU  - Primary Author ( 100$a )
+PY  - Published Year ( 264$c )
+TI  - Title ( 245$a )
+A2  - Secondary author ( 245$c )
+CY  - Place Published ( 264$a )
+PB  - Publisher ( 264$a )
+VL  - Volume ( 490$v )
+NV  - Number of volumes ( 300$a )
+IS  - Number ( 773$g
+SP  - Pages ( 300$a )
+SE  - Section ( 246$n )
+ET  - Edition ( 250$a )
+DA  - Date ( 264$c )
+M3  - Type of Work ( 380$a )
+ST  - Short Title ( 246#a )
+SN  - ISBN/ISSN ( 020#a )
+KW  - Keyword 1 ( 650$a )
+Keyword 2 ( 650$a )
+Keyword 3 ( 650$a )
+AB  - Abstract ( 520$a )
+N1  - Notes ( 500$a )
+UR  - URL ( 856$u )
+AD  - Author Address ( 100$u )
+DO  - DOI ( 024$2, 024$a )
+C1  - Custom 1 ( 590$a )
+ER  - 
 
