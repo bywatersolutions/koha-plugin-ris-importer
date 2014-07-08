@@ -28,33 +28,364 @@ our $metadata = {
 our $ris_to_marc = {
     BOOK => {
         TY => { field => '942', subfield => 'c' },
-        AU => { field => '100', subfield => 'a', indicator_1 => '1' },
-        PY => { field => '264', subfield => 'c', indicator_2 => '1' },
+        AU => { field => '100', subfield => 'a', ind1 => '1' },
+        PY => { field => '264', subfield => 'c', ind2 => '1' },
         TI => { field => '245', subfield => 'a' },
         A2 => { field => '245', subfield => 'c' },
-        T2 => { field => '773', subfield => 't', indicator_1 => '1' },
-        CY => { field => '264', subfield => 'a', indicator_2 => '1' },
-        PB => { field => '264', subfield => 'a', indicator_2 => '1' },
+        T2 => { field => '773', subfield => 't', ind1 => '1' },
+        CY => { field => '264', subfield => 'a', ind2 => '1' },
+        PB => { field => '264', subfield => 'a', ind2 => '1' },
         VL => { field => '490', subfield => 'v' },
         NV => { field => '300', subfield => 'a' },
-        M1 => { field => '773', subfield => 'g', indicator_1 => '1' },
+        M1 => { field => '773', subfield => 'g', ind1 => '1' },
         SP => { field => '300', subfield => 'a' },
-        SE => { field => '245', subfield => 'n', indicator_1 => '3' },
-        A3 => { field => '700', subfield => 'a', indicator_1 => '1' },
+        SE => { field => '245', subfield => 'n', ind1 => '3' },
+        A3 => { field => '700', subfield => 'a', ind1 => '1' },
         ET => { field => '250', subfield => 'a' },
-        DA => { field => '264', subfield => 'c', indicator_1 => '1' },
-        A4 => { field => '700', subfield => 'a', indicator_1 => '1' },
-        ST => { field => '246', subfield => 'a', indicator_1 => '2' },
+        DA => { field => '264', subfield => 'c', ind1 => '1' },
+        A4 => { field => '700', subfield => 'a', ind1 => '1' },
+        ST => { field => '246', subfield => 'a', ind1 => '2' },
         SN => { field => '020', subfield => 'a' },
-        KW => { field => '650', subfield => 'a', indicator_2 => '0', split => "\n" },
-        AB => { field => '520', subfield => 'a', indicator_1 => '3' },
+        KW => { field => '650', subfield => 'a', ind2 => '0', split => "\n" },
+        AB => { field => '520', subfield => 'a', ind1 => '3' },
         N1 => { field => '500', subfield => 'a' },
-        UR => { field => '856', subfield => 'u', indicator_1 => '4', indicator_2 => '#' },
-        AD => { field => '100', subfield => 'u', indicator_1 => '1' },
-        DO => { field => '024', subfield => 'a', indicator_1 => '7' },
+        UR => { field => '856', subfield => 'u', ind1 => '4', ind2 => '#' },
+        AD => { field => '100', subfield => 'u', ind1 => '1' },
+        DO => [
+            { field => '024', subfield => 'a', ind1 => '7' },
+            { field => '024', subfield => 'a', ind1 => '7' }
+        ],
         C1 => { field => '590', subfield => 'a' },
     },
-  };
+    CHAP => {
+        TY => { field => '942', subfield => 'c', value => 'BOOKCHPTR' },
+        AU => { field => '100', subfield => 'a', ind1  => '1' },
+        PY => { field => '264', subfield => 'c', ind2  => '1' },
+        TI => { field => '245', subfield => 'a' },
+        A2 => { field => '245', subfield => 'c' },
+        T2 => { field => '773', subfield => 't', ind1  => '1' },
+        CY => { field => '264', subfield => 'a', ind2  => '1' },
+        PB => { field => '264', subfield => 'a', ind2  => '1' },
+        VL => { field => '490', subfield => 'v' },
+        NV => { field => '300', subfield => 'a' },
+        M1 => { field => '773', subfield => 'g', ind1  => '1' },
+        SP => { field => '300', subfield => 'a' },
+        SE => { field => '245', subfield => 'n', ind1  => '3' },
+        A3 => { field => '700', subfield => 'a', ind1  => '1' },
+        ET => { field => '250', subfield => 'a' },
+        DA => { field => '264', subfield => 'c', ind1  => '1' },
+        A4 => { field => '700', subfield => 'a', ind1  => '1' },
+        ST => { field => '246', subfield => 'a', ind1  => '2' },
+        SN => { field => '020', subfield => 'a' },
+        OP => { field => '773', subfield => 'g', ind1 => '#', ind2  => '1' },
+        KW => { field => '650', subfield => 'a', ind2 => '0', split => "\n" },
+        AB => { field => '520', subfield => 'a', ind1 => '3' },
+        N1 => { field => '500', subfield => 'a' },
+        UR => { field => '856', subfield => 'u', ind1 => '4', ind2  => '#' },
+        AD => { field => '100', subfield => 'u', ind1 => '1' },
+        DO => [
+            { field => '024', subfield => 'a', ind1  => '7' },
+            { field => '024', subfield => '2', value => 'DOI' }
+        ],
+        C1 => { field => '590', subfield => 'a' },
+    },
+    THES => {
+        TY => { field => '942', subfield => 'c', value => 'THESIS' },
+        AU => { field => '100', subfield => 'a', ind1  => '1' },
+        PY => { field => '264', subfield => 'c', ind2  => '1' },
+        TI => { field => '245', subfield => 'a' },
+        A2 => { field => '245', subfield => 'c' },
+        CY => { field => '264', subfield => 'a', ind2  => '1' },
+        PB => { field => '502', subfield => 'c' },
+        VL => { field => '502', subfield => 'b' },
+        SP => { field => '773', subfield => 'g', ind1 => '1', ind2 => '#' },
+        A3 => { field => '508', subfield => 'a' },
+        DA => { field => '773', subfield => 'g', ind1 => '1', ind2 => '#' },
+        SN => { field => '020', subfield => 'a', ind1 => '#', ind2 => '#' },
+        AB => { field => '520', subfield => 'a', ind1 => '3', ind2 => '#' },
+        N1 => { field => '500', subfield => 'a', ind1 => '#', ind2 => '#' },
+        AD => { field => '100', subfield => 'u', ind1 => '1' },
+        DO => [
+            { field => '024', subfield => 'a', ind1  => '7' },
+            { field => '024', subfield => '2', value => 'DOI' }
+        ],
+        C1 => { field => '590', subfield => 'a' },
+    },
+    CONF => {
+        TY => { field => '942', subfield => 'c', value => 'CONFERENCE' },
+        AU => { field => '100', subfield => 'a', ind1  => '1', ind2 => '#' },
+        PY => { field => '264', subfield => 'c', ind1  => '#', ind2 => '1' },
+        TI => { field => '245', subfield => 'a' },
+        A2 => { field => '245', subfield => 'c' },
+        CY => { field => '264', subfield => 'a', ind1 => '#', ind2 => '1' },
+        PB => { field => '264', subfield => 'b', ind1 => '1', ind2 => '#' },
+        VL => { field => '490', subfield => 'v' },
+        NV => { field => '300', subfield => 'a' },
+        SP => { field => '773', subfield => 'q' },
+        SE => { field => '246', subfield => 'n', ind1 => '3', ind2 => '#' },
+        ET => { field => '250', subfield => 'a' },
+        DA => { field => '264', subfield => 'c', ind1 => '#', ind2 => '1' },
+        M3 => { field => '380', subfield => 'a' },
+        ST => { field => '246', subfield => 'a', ind1 => '2', ind2 => '#' },
+        SN => { field => '020', subfield => 'a', ind1 => '#', ind2 => '#' },
+        KW => { field => '650', subfield => 'a', ind2 => '0', split => "\n" },
+        AB => { field => '520', subfield => 'a', ind1 => '3', ind2 => '#' },
+        N1 => { field => '500', subfield => 'a', ind1 => '#', ind2 => '#' },
+        UR => { field => '856', subfield => 'u', ind1 => '4', ind2 => '#' },
+        AD => { field => '100', subfield => 'u', ind1 => '1' },
+        DO => [
+            { field => '024', subfield => 'a', ind1  => '7' },
+            { field => '024', subfield => '2', value => 'DOI' }
+        ],
+        C1 => { field => '590', subfield => 'a' },
+    },
+    JOUR => {
+        TY => { field => '942', subfield => 'c', value => 'JOURNAL' },
+        AU => { field => '100', subfield => 'a', ind1  => '1' },
+        PY => { field => '264', subfield => 'c', ind2  => '1' },
+        TI => { field => '245', subfield => 'a' },
+        A2 => { field => '245', subfield => 'c' },
+        T2 => { field => '773', subfield => 't', ind1  => '1' },
+        CY => { field => '264', subfield => 'a', ind1 => '#', ind2 => '1' },
+        PB => { field => '264', subfield => 'b', ind1 => '#', ind2 => '1' },
+        VL => { field => '773', subfield => 'g' },
+        IS => { field => '773', subfield => 'g' },
+        SP => { field => '773', subfield => 'q' },
+        SE => { field => '246', subfield => 'n', ind1 => '3', ind2 => '#' },
+        ET => { field => '250', subfield => 'a' },
+        DA => { field => '264', subfield => 'c', ind1 => '#', ind2 => '1' },
+        M3 => { field => '380', subfield => 'a' },
+        ST => { field => '246', subfield => 'a', ind1 => '2', ind2 => '#' },
+        SN => { field => '022', subfield => 'a', ind1 => '#', ind2 => '#' },
+        KW => {
+            field    => '650',
+            subfield => 'a',
+            ind1     => '#',
+            ind2     => '0',
+            split    => "\n"
+        },
+        AB => { field => '520', subfield => 'a', ind1 => '3', ind2 => '#' },
+        N1 => { field => '500', subfield => 'a', ind1 => '#', ind2 => '#' },
+        UR => { field => '856', subfield => 'u', ind1 => '4', ind2 => '#' },
+        AD => { field => '100', subfield => 'u', ind1 => '1' },
+        DO => [
+            { field => '024', subfield => 'a', ind1  => '7' },
+            { field => '024', subfield => '2', value => 'DOI' }
+        ],
+        C1 => { field => '590', subfield => 'a' },
+    },
+    MGZN => {
+        TY => { field => '942', subfield => 'c', value => 'MAGARTICLE' },
+        AU => { field => '100', subfield => 'a', ind1  => '1' },
+        PY => { field => '264', subfield => 'c', ind2  => '1' },
+        TI => { field => '245', subfield => 'a' },
+        A2 => { field => '245', subfield => 'c' },
+        T2 => { field => '773', subfield => 't' },
+        CY => { field => '264', subfield => 'a' },
+        PB => { field => '264', subfield => 'b' },
+        VL => { field => '773', subfield => 'g' },
+        IS => { field => '773', subfield => 'g' },
+        SP => { field => '773', subfield => 'q' },
+        SN => { field => '022', subfield => 'a' },
+        KW => {
+            field    => '650',
+            subfield => 'a',
+            ind1     => '#',
+            ind2     => '0',
+            split    => "\n"
+        },
+        AB => { field => '520', subfield => 'a', ind1 => '3', ind2 => '#' },
+        N1 => { field => '500', subfield => 'a', ind1 => '#', ind2 => '#' },
+        UR => { field => '856', subfield => 'u', ind1 => '4', ind2 => '#' },
+        AD => { field => '100', subfield => 'u', ind1 => '1' },
+        DO => [
+            { field => '024', subfield => 'a', ind1  => '7' },
+            { field => '024', subfield => '2', value => 'DOI' }
+        ],
+        C1 => { field => '590', subfield => 'a' },
+    },
+    EDBOOK => {
+        TY => { field => '942', subfield => 'c', value => 'EDITBOOK' },
+        AU => { field => '100', subfield => 'a', ind1  => '1' },
+        PY => { field => '264', subfield => 'c', ind2  => '1' },
+        TI => { field => '773', subfield => 't' },
+        A2 => { field => '245', subfield => 'c' },
+        OP => { field => '264', subfield => 'b' },
+        SP => { field => '773', subfield => 'q' },
+        SN => { field => '022', subfield => 'a' },
+        KW => {
+            field    => '650',
+            subfield => 'a',
+            ind1     => '#',
+            ind2     => '0',
+            split    => "\n"
+        },
+        AB => { field => '520', subfield => 'a', ind1 => '3', ind2 => '#' },
+        N1 => { field => '500', subfield => 'a', ind1 => '#', ind2 => '#' },
+        UR => { field => '856', subfield => 'u', ind1 => '4', ind2 => '#' },
+        AD => { field => '100', subfield => 'u', ind1 => '1' },
+        DO => [
+            { field => '024', subfield => 'a', ind1  => '7' },
+            { field => '024', subfield => '2', value => 'DOI' }
+        ],
+        C1 => { field => '590', subfield => 'a' },
+    },
+    EDBOOK => {
+        TY => { field => '942', subfield => 'c', value => 'EDITBOOK' },
+        AU => { field => '100', subfield => 'a', ind1  => '1' },
+        PY => { field => '264', subfield => 'c', ind2  => '1' },
+        TI => { field => '773', subfield => 't' },
+        A2 => { field => '245', subfield => 'c' },
+        OP => { field => '264', subfield => 'b' },
+        SP => { field => '773', subfield => 'q' },
+        SN => { field => '022', subfield => 'a' },
+        KW => {
+            field    => '650',
+            subfield => 'a',
+            ind1     => '#',
+            ind2     => '0',
+            split    => "\n"
+        },
+        AB => { field => '520', subfield => 'a', ind1 => '3', ind2 => '#' },
+        N1 => { field => '500', subfield => 'a', ind1 => '#', ind2 => '#' },
+        UR => { field => '856', subfield => 'u', ind1 => '4', ind2 => '#' },
+        AD => { field => '100', subfield => 'u', ind1 => '1' },
+        DO => [
+            { field => '024', subfield => 'a', ind1  => '7' },
+            { field => '024', subfield => '2', value => 'DOI' }
+        ],
+        C1 => { field => '590', subfield => 'a' },
+    },
+    ENEW => {
+        TY => { field => '942', subfield => 'c', value => 'ENEWSLTTR' },
+        AU => { field => '100', subfield => 'a', ind1  => '1' },
+        PY => { field => '264', subfield => 'c', ind2  => '1' },
+        TI => { field => '773', subfield => 't' },
+        A2 => { field => '245', subfield => 'c' },
+        CY => { field => '264', subfield => 'a' },
+        SP => { field => '773', subfield => 'q' },
+        PB => { field => '264', subfield => 'b' },
+        KW => {
+            field    => '650',
+            subfield => 'a',
+            ind1     => '#',
+            ind2     => '0',
+            split    => "\n"
+        },
+        VL => { field => '773', subfield => 'g' },
+        IS => { field => '773', subfield => 'g' },
+        N1 => { field => '500', subfield => 'a', ind1 => '#', ind2 => '#' },
+        UR => { field => '856', subfield => 'u', ind1 => '4', ind2 => '#' },
+        AD => { field => '100', subfield => 'u', ind1 => '1' },
+        DO => [
+            { field => '024', subfield => 'a', ind1  => '7' },
+            { field => '024', subfield => '2', value => 'DOI' }
+        ],
+        C1 => { field => '590', subfield => 'a' },
+        N1 => { field => '590', subfield => 'a' },
+    },
+    ELEC => {
+        TY => { field => '942', subfield => 'c', value => 'ERESOURCE' },
+        AU => { field => '100', subfield => 'a', ind1  => '1' },
+        PY => { field => '264', subfield => 'c', ind2  => '1' },
+        TI => { field => '245', subfield => 'a' },
+        A2 => { field => '245', subfield => 'c' },
+        CY => { field => '264', subfield => 'a' },
+        PB => { field => '264', subfield => 'b' },
+        VL => { field => '490', subfield => 'v' },
+        SP => { field => '773', subfield => 'q' },
+        AB => { field => '520', subfield => 'a', ind1 => '3', ind2 => '#' },
+        KW => {
+            field    => '650',
+            subfield => 'a',
+            ind1     => '#',
+            ind2     => '0',
+            split    => "\n"
+        },
+        N1 => { field => '500', subfield => 'a', ind1 => '#', ind2 => '#' },
+        UR => { field => '856', subfield => 'u', ind1 => '4', ind2 => '#' },
+        DO => [
+            { field => '024', subfield => 'a', ind1  => '7' },
+            { field => '024', subfield => '2', value => 'DOI' }
+        ],
+        C1 => { field => '590', subfield => 'a' },
+        N1 => { field => '590', subfield => 'a' },
+    },
+    NEWS => {
+        TY => { field => '942', subfield => 'c', value => 'NEWSPPR' },
+        AU => { field => '100', subfield => 'a', ind1  => '1' },
+        A2 => { field => '245', subfield => 'c' },
+        TI => { field => '245', subfield => 'a' },
+        T2 => { field => '773', subfield => 't', ind1 => '1', ind2 => '#' },
+        CY => { field => '264', subfield => 'a' },
+        PB => { field => '264', subfield => 'b' },
+        VL => { field => '773', subfield => 'g' },
+        IS => { field => '773', subfield => 'g' },
+        SP => { field => '773', subfield => 'q' },
+        SN => { field => '022', subfield => 'a' },
+        UR => { field => '856', subfield => 'u', ind1 => '4', ind2 => '#' },
+        KW => {
+            field    => '650',
+            subfield => 'a',
+            ind1     => '#',
+            ind2     => '0',
+            split    => "\n"
+        },
+        AB => { field => '520', subfield => 'a', ind1 => '3', ind2 => '#' },
+        C1 => { field => '590', subfield => 'a' },
+        N1 => { field => '590', subfield => 'a' },
+    },
+    RPRT => {
+        TY => { field => '942', subfield => 'c', value => 'REPORT' },
+        PY => { field => '264', subfield => 'c', ind2  => '1', ind2 => '#' },
+        TI => { field => '245', subfield => 'a' },
+        AU => { field => '100', subfield => 'a', ind1 => '1', ind2 => '#' },
+        A2 => { field => '245', subfield => 'c' },
+        CY => { field => '264', subfield => 'a' },
+        PB => { field => '264', subfield => 'b' },
+        SP => { field => '773', subfield => 'q' },
+        UR => { field => '856', subfield => 'u', ind1 => '4', ind2 => '#' },
+        KW => {
+            field    => '650',
+            subfield => 'a',
+            ind1     => '#',
+            ind2     => '0',
+            split    => "\n"
+        },
+        VL => { field => '490', subfield => 'v', ind1 => '1', ind2 => '#' },
+        T2 => { field => '773', subfield => 't', ind1 => '1', ind2 => '#' },
+        N1 => { field => '590', subfield => 'a' },
+        AB => { field => '520', subfield => 'a', ind1 => '3', ind2 => '#' },
+        SE => { field => '246', subfield => 'n', ind1 => '3', ind2 => '#' },
+        C1 => { field => '590', subfield => 'a' },
+    },
+    ADVS => {
+        TY => { field => '942', subfield => 'c', value => 'A/V' },
+        AU => { field => '100', subfield => 'a', ind1  => '1', ind2 => '#' },
+        M3 => { field => '338', subfield => 'a', ind1  => '#', ind2 => '#' },
+        DO => [
+            { field => '024', subfield => 'a', ind1  => '7' },
+            { field => '024', subfield => '2', value => 'DOI' }
+        ],
+        KW => {
+            field    => '650',
+            subfield => 'a',
+            ind1     => '#',
+            ind2     => '0',
+            split    => "\n"
+        },
+        A2 => { field => '245', subfield => 'c' },
+        CY => { field => '264', subfield => 'a' },
+        PB => { field => '264', subfield => 'b' },
+        UR => { field => '856', subfield => 'u', ind1 => '4', ind2 => '#' },
+        VL => { field => '490', subfield => 'v', ind1 => '1', ind2 => '#' },
+        N1 => { field => '500', subfield => 'a' },
+        LA => { field => '041', subfield => 'a' },
+        ET => { field => '250', subfield => 'a' },
+        AB => { field => '520', subfield => 'a', ind1 => '3', ind2 => '#' },
+        C1 => { field => '590', subfield => 'a' },
+    },
+};
 
 ## This is the minimum code required for a plugin's 'new' method
 ## More can be added, but none should be removed
@@ -100,7 +431,7 @@ sub to_marc {
         my $field;
 
         my $TY = $ris->{TY}->[0];
-        chomp( $TY );
+        chomp($TY);
 
         unless ($TY) {
             warn "No TY field found! Skipping record!";
@@ -109,7 +440,7 @@ sub to_marc {
 
         my $tags_to_fields = $ris_to_marc->{$TY};
 
-        unless ( $tags_to_fields ) {
+        unless ($tags_to_fields) {
             warn "No mapping for $TY!";
             next;
         }
@@ -117,23 +448,34 @@ sub to_marc {
         foreach my $key ( keys %$tags_to_fields ) {
             my $data = $tags_to_fields->{$key};
 
-            my $field = $data->{field};
-            my $subfield = $data->{subfield};
-            my $indicator_1 = $data->{indicator_1} || q{ };
-            my $indicator_2 = $data->{indicator_2} || q{ };
-            my $split = $data->{split};
+            my @data;
+            if ( ref $data eq 'HASH' ) {
+                @data = ($data);
+            }
+            else {
+                @data = @$data;
+            }
 
-            if ( $ris->{$key} ) {
-                foreach my $value ( @{ $ris->{$key} } ) {
-                    my @values = $split ? split( /$split/, $value ) : ($value);
+            foreach $data (@data) {
+                my $field    = $data->{field};
+                my $subfield = $data->{subfield};
+                my $ind1     = $data->{ind1} || q{ };
+                my $ind2     = $data->{ind2} || q{ };
+                my $split    = $data->{split};
 
-                    foreach my $v (@values) {
-                        my $ret = $record->insert_fields_ordered(
-                            MARC::Field->new(
-                                $field, $indicator_1,
-                                $indicator_2, $subfield => $v,
-                            )
-                        );
+                if ( $ris->{$key} ) {
+                    foreach my $value ( @{ $ris->{$key} } ) {
+                        my @values =
+                          $split ? split( /$split/, $value ) : ($value);
+
+                        foreach my $v (@values) {
+                            my $ret = $record->insert_fields_ordered(
+                                MARC::Field->new(
+                                    $field, $ind1, $ind2,
+                                    $subfield => $data->{value} || $v,
+                                )
+                            );
+                        }
                     }
                 }
             }
@@ -154,13 +496,13 @@ sub map_nr_nr {
     my $ris_field     = $params->{ris_field};
     my $marc_field    = $params->{marc_field};
     my $marc_subfield = $params->{marc_subfield};
-    my $indicator_1   = $params->{indicator_1} // '#';
-    my $indicator_2   = $params->{indicator_2} // '#';
+    my $ind1          = $params->{ind1} // '#';
+    my $ind2          = $params->{ind2} // '#';
 
     $record->append_fields(
         MARC::Field->new(
-            $marc_field, $indicator_1,
-            $indicator_2, $marc_subfield => $ris->{$ris_field}->[0]
+            $marc_field, $ind1,
+            $ind2, $marc_subfield => $ris->{$ris_field}->[0]
         )
     ) if $ris->{$ris_field};
 }

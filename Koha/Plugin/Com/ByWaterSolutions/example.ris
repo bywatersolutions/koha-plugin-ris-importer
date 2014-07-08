@@ -274,7 +274,7 @@ N1  - Notes ( 500$a )
 UR  - URL ( 856$u )
 UR  - URL2 ( 856$u )
 AD  - Author Address ( 100$u )
-DO  - DOI ( 024$2, 024$a )
+DO  - DOI ( 024$2, 024$a ) ex 10.1159/000074220
 C1  - Custom 1 ( 590$a )
 ER  - 
 
